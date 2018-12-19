@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "JavaScriptTestIndex";
+}
+
+<script>
+    var testdeleteProduct = function() {
+        deleteProduct(3);
+    }
+
+    var changeProduct = function() {
+        var product = model.products()[1];
+        product.Price = product.Price + 20;
+        saveProduct(product);
+    }
+
+
+    var testdeleteCategory = function () {
+        deleteCategory(5);
+    }
+
+    var changeCategory = function () {
+        var category = model.categories()[1];
+        category.Name = "Mobil Telefon";
+        saveCategory(category);
+    }
+
+
+    var testdeleteOrder = function () {
+        deleteOrder(3);
+    }
+
+    var changeOrder = function () {
+        var order = model.orders()[1];
+        order.UserName = "dogancanalptekin10";
+        saveOrder(order);
+    }
+</script>
+
+<div class="panel panel-danger" data-bind="visible:model.isError(),text:model.error()">
+
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Product Controller Methodları</div>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                <button class="btn btn-primary" data-bind="click:getProducts">Ürünleri Getir</button>
+            </td>
+            <td>
+                <button class="btn btn-warning" data-bind="click:changeProduct">Ürün Güncelle</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" data-bind="click:testdeleteProduct">Ürün Sil</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Category Controller Methodları</div>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                <button class="btn btn-primary" data-bind="click:getCategories">Kategorileri Getir</button>
+            </td>
+            <td>
+                <button class="btn btn-warning" data-bind="click:changeCategory">Kategori Güncelle</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" data-bind="click:testdeleteCategory">Kategori Sil</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">Order Controller Methodları</div>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                <button class="btn btn-primary" data-bind="click:getOrders">Siparişleri Getir</button>
+            </td>
+            <td>
+                <button class="btn btn-warning" data-bind="click:changeOrder">Sipariş Güncelle</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" data-bind="click:testdeleteOrder">Sipariş Sil</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
